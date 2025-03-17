@@ -17,6 +17,10 @@ public class GreetingService {
     public Greeting saveGreeting(Greeting greeting) {
         return repository.save(greeting);
     }
+    public void deleteGreeting(Long id) {
+        repository.deleteById(id);
+    }
+
 
     public List<Greeting> getAllGreetings() {
         return repository.findAll();
